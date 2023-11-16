@@ -1,6 +1,6 @@
 const campoSelect = document.querySelector('select');
-const listaDias = document.querySelector('ul');
-const h1 = document.querySelector('h1');
+const listaDias   = document.querySelector('ul');
+const h1          = document.querySelector('h1');
 
 campoSelect.addEventListener('change', () => {
   const eleccion = campoSelect.value;
