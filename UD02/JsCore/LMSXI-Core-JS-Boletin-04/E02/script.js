@@ -1,5 +1,5 @@
-const botonEnviar = document.getElementById("botonEnviar");
-const botonReset  = document.getElementById("botonReset");
+const botonEnviar        = document.getElementById("botonEnviar");
+const botonReset         = document.getElementById("botonReset");
 const velocidadInicial   = document.getElementById("velocidadInicial");
 const aceleracion        = document.getElementById("aceleracion");
 const tiempoTranscurrido = document.getElementById("tiempoTranscurrido");

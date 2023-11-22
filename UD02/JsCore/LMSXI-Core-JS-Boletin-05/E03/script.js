@@ -22,7 +22,7 @@ botonEnviar.addEventListener('click', (evento) => {
         //   N es primo si N no es divisible por
         //   cualquier entero (primo) <= raíz cuadrada de N
         //   (es decir, en vez de numero - 1, 
-        //     podríamos poner Math.floor(Math.sqrt(numero))
+        //     podríamos poner Math.ceil(Math.sqrt(numero))
         for (let i = 2; i < numero - 1; i++) {
             if ( numero % i === 0) {
                 parrafo.innerText = 'El número no es primo';

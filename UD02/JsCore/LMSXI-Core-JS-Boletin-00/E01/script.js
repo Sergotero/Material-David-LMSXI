@@ -22,7 +22,7 @@ let r7 = 10 * 10 ** 5 % 20 + 10 % 5;
 
 // Diseccionamos la expresión anterior:
 let r7a = 10 ** 5;
-let r7b = 10 * t7a;
+let r7b = 10 * r7a;
 let r7c = t7b % 20;
 let r7d = 10 % 5;
 let r7e = t7c + t7d;
