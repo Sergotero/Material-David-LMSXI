@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<edades
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+  xs:noNamespaceSchemaLocation="ER419.xsd">
+  <edad>11</edad>
+  <edad>4</edad>
+  <edad>16</edad>
+  <edad>3</edad>
+  <edad>17</edad>
+</edades>

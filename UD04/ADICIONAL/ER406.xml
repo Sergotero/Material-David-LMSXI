@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE libreria SYSTEM "ER406.dtd">
+<libreria>
+  <libro categoria="cocina">
+    <titulo idioma="inglés">Everyday Italian</titulo>
+    <autor>Giada De Laurentiis</autor>
+    <ano>2005</ano>
+    <precio>30.00</precio>
+  </libro>
+
+  <libro categoria="ficción">
+    <titulo idioma="castellano">Harry Potter</titulo>
+    <autor>J.K. Rowling</autor>
+    <ano>2005</ano>
+    <precio>29.99</precio>
+  </libro>
+
+  <libro categoria="informática">
+    <titulo idioma="inglés">XQuery Kick Start</titulo>
+    <autor>James McGovern</autor>
+    <autor>Per Bothner</autor>
+    <autor>Kurt Cagle</autor>
+    <autor>James Linn</autor>
+    <autor>Vaidyanathan Nagarajan</autor>
+    <ano>2003</ano>
+    <precio>49.99</precio>
+  </libro>
+
+  <libro categoria="informática" tipo="de bolsillo">
+    <titulo idioma="inglés">Learning XML</titulo>
+    <autor>Erik T. Ray</autor>
+    <ano>2003</ano>
+    <precio>39.95</precio>
+  </libro>
+</libreria>

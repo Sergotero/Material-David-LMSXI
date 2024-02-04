@@ -1,0 +1,96 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="registro">
+    <xs:complexType>
+      <xs:group ref="usuario-empleado"></xs:group>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group name="usuario-empleado">
+    <xs:sequence>
+        <xs:element name="usuario" type="tipoPersona" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        <xs:element name="empleado" type="tipoPersonaAmpliado" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="tipoPersona">
+    <xs:sequence>
+      <xs:group ref="persona"></xs:group>
+    </xs:sequence>
+    <xs:attribute name="identificador" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[UE][0-9]{1,5}"></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:group name="persona">
+    <xs:sequence>
+      <xs:element name="apellidos-y-nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z ]{1,30},[a-zA-Z ]{1,20}"></xs:pattern>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{1,15}@[a-z]{1,25}\.[a-z]{2,4}"></xs:pattern>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="conexiones">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="conexión" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:positiveInteger">
+                    <xs:attributeGroup ref="datetime"></xs:attributeGroup>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:attributeGroup name="datetime">
+    <xs:attribute name="fecha" type="xs:date" use="required"></xs:attribute>
+    <xs:attribute name="hora" type="xs:time" use="required"></xs:attribute>
+  </xs:attributeGroup>
+
+  <xs:complexType name="tipoPersonaAmpliado">
+    <xs:complexContent>
+      <xs:extension base="tipoPersona">
+        <xs:sequence>
+          <xs:element name="departamento">
+            <xs:complexType>
+              <xs:choice>
+                <xs:group ref="departamento"></xs:group>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:group name="departamento">
+    <xs:choice>
+      <xs:element name="administración">
+        <xs:complexType></xs:complexType>
+      </xs:element>
+      <xs:element name="informática">
+        <xs:complexType></xs:complexType>
+      </xs:element>
+      <xs:element name="marketing">
+        <xs:complexType></xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+</xs:schema>

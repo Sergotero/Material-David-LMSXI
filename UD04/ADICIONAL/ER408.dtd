@@ -1,0 +1,6 @@
+<!ELEMENT peliculas (pelicula+, autor)>
+<!ELEMENT pelicula ((titulo|director), (titulo|director))>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ATTLIST director edad CDATA #REQUIRED>
+<!ELEMENT autor (#PCDATA)>

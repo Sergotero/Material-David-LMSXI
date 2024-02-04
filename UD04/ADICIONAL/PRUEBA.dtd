@@ -1,0 +1,3 @@
+<!ELEMENT ciudad (nombre, pais)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>

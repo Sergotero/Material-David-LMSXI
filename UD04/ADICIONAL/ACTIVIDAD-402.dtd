@@ -1,0 +1,34 @@
+<!ELEMENT tienda (productos, clientes, ventas)>
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto (titulo, (fabricante|marca), modelo, precio, stock, reacondicionado?)>
+<!ATTLIST producto idP ID #REQUIRED>
+<!ATTLIST producto ean CDATA #IMPLIED>
+<!ATTLIST producto iva (general|reducido|superreducido) #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fabricante (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio divisa (EUR | USD) #REQUIRED>
+<!ATTLIST precio descuento CDATA "0">
+<!ELEMENT stock (#PCDATA)>
+<!ELEMENT reacondicionado EMPTY>
+<!ELEMENT clientes (cliente*)>
+<!ELEMENT cliente ( ((nombre, apellidos) | nombre-completo), dni, telefono*, direccion?)>
+<!ATTLIST cliente idC ID #REQUIRED>
+<!ATTLIST cliente creado CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT nombre-completo (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT ventas (venta*)>
+<!ELEMENT venta (item+, total)>
+<!ATTLIST venta fecha CDATA #REQUIRED>
+<!ATTLIST venta cliente IDREF #REQUIRED>
+<!ELEMENT item EMPTY>
+<!ATTLIST item ref IDREF #REQUIRED>
+<!ATTLIST item cantidad CDATA "1">
+<!ELEMENT total (#PCDATA)>
+<!ATTLIST total divisa (EUR|USD) #REQUIRED>

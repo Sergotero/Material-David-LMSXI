@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compras>
+    <compra>
+        <titulo>Agua</titulo>
+        <fecha>15/09/2022</fecha>
+        <categorias>
+            <categoria>Bebida</categoria>
+            <categoria>Alimentación</categoria>
+        </categorias>
+        <precio>0,36</precio>
+    </compra>
+    <compra>
+        <titulo>Bolígrafo</titulo>
+        <fecha>19/09/2022</fecha>
+        <categorias>
+            <categoria>Papelería</categoria>
+        </categorias>
+        <precio>1,45</precio>
+    </compra>
+    <compra>
+        <titulo>Billete tren</titulo>
+        <fecha>19/09/2022</fecha>
+        <categorias>
+            <categoria>Transporte</categoria>
+            <categoria>Tren</categoria>
+        </categorias>
+        <precio>8,90</precio>
+    </compra>
+</compras>

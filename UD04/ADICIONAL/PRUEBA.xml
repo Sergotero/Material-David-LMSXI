@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paises SYSTEM "PRUEBA.dtd">
+<paises>
+  <pais codigo="fr">Francia</pais>
+  <pais codigo="es">España</pais>
+  <pais codigo="pt">Portugal</pais>
+  <region lacra="ms">Mandanga</region>
+</paises>

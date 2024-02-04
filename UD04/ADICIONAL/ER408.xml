@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE peliculas SYSTEM "ER408.dtd">
+<peliculas>
+  <pelicula>
+    <titulo>Con faldas y a lo loco</titulo>
+    <director edad='&quot;setenta y dos&quot;'>Billy Wilder</director>
+  </pelicula>
+  <pelicula>
+    <director edad="&apos;cincuenta&apos;">Leo McCarey</director>
+    <titulo>Sopa de ganso</titulo>
+  </pelicula>
+  <autor>barto</autor>
+</peliculas>

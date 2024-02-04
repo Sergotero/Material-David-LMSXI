@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="documento" type="tipoDocumento"/>
+  
+  <xs:complexType name="tipoDocumento">
+    <xs:sequence>
+      <xs:element name="comentario" type="xs:string"/>
+      <xs:element name="principal" type="tipoPrincipal"/>
+      <xs:element name="parte" type="tipoParte" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="tipoPrincipal" mixed="true">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="ref" type="tipoRef"/>
+      <xs:element name="autor" type="xs:string"/>
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="tipoParte" mixed="true">
+    <xs:sequence>
+      <xs:element name="ref" type="tipoRef" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="tipoRef">
+    <xs:attribute name="to" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+</xs:schema>

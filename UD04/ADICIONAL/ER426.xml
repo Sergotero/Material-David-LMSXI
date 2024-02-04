@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ER426.xsd">
+    <comentario>Texto comentario</comentario>
+    
+    <principal>
+      Este <ref to="p1"/> <ref to="p4"/> escrito
+      por <autor>mi</autor>. Con
+      este <ref to="p2"/> se
+      ganará el premio nobel de <ref to="p4"/>
+    </principal>
+  
+    <parte id="p1">texto</parte>
+    <parte id="p2"> <ref to="p1"/> complejo</parte>
+    <parte id="p3">far <ref to="p3"/></parte>
+    <parte id="p4">largo</parte>
+  </documento>

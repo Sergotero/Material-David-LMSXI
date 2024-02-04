@@ -1,0 +1,152 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tienda" type="tipoTienda" />
+
+  <xs:complexType name="tipoTienda">
+    <xs:sequence>
+      <xs:element name="productos" type="tipoProductos" minOccurs="1" />
+      <xs:element name="clientes" type="tipoClientes" minOccurs="0" />
+      <xs:element name="ventas" type="tipoVentas" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoProductos">
+    <xs:sequence>
+      <xs:element name="producto" type="tipoProducto" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoProducto">
+    <xs:sequence>
+      <xs:element name="titulo" type="tipoTitulo" />
+      <xs:element name="fabricante" type="xs:string" />
+      <xs:element name="modelo" type="xs:string" />
+      <xs:element name="precio" type="tipoPrecio" />
+      <xs:element name="stock" type="xs:positiveInteger" />
+      <xs:element name="reacondicionado" type="tipoReacondicionado" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="idP" type="xs:ID" use="required" />
+    <xs:attribute name="ean" type="tipoEan" use="optional" />
+    <xs:attribute name="iva" type="porcentaje" use="optional" default="21" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoTitulo">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoEan">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{13}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoPrecio">
+    <xs:simpleContent>
+      <xs:extension base="formatoPrecio">
+        <xs:attribute name="divisa" type="tipoDivisa" use="required" />
+        <xs:attribute name="descuento" type="porcentaje" use="optional" default="0" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="porcentaje">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="formatoPrecio">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoDivisa">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EUR" />
+      <xs:enumeration value="USD" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoClientes">
+    <xs:sequence>
+      <xs:element name="cliente" type="tipoCliente" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoCliente">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" minOccurs="1" />
+      <xs:element name="apellidos" type="xs:string" minOccurs="1" />
+      <xs:element name="dni" type="tipoDNI" minOccurs="1" />
+      <xs:element name="telefono" type="tipoTelefono" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="direccion" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="idC" type="xs:ID" use="required" />
+    <xs:attribute name="creado" type="tipoFecha" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoDNI">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}[A-Z]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoTelefono">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+[0-9]{2} [0-9]{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoFecha">
+    <xs:restriction base="xs:date">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoVentas">
+    <xs:sequence>
+      <xs:element name="venta" type="tipoVenta" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoVenta">
+    <xs:sequence>
+      <xs:element name="item" type="tipoItem" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="total" type="tipoTotal" minOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="fecha" type="tipoFecha" use="required" />
+    <xs:attribute name="hora" type="tipoHora" use="required" />
+    <xs:attribute name="cliente" type="xs:IDREF" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoHora">
+    <xs:restriction base="xs:time">
+      <xs:pattern value="\d{2}:\d{2}:\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoTotal">
+    <xs:simpleContent>
+      <xs:extension base="formatoPrecio">
+        <xs:attribute name="divisa" type="tipoDivisa" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="tipoItem">
+    <xs:attribute name="ref" type="xs:IDREF" use="required" />
+    <xs:attribute name="cantidad" type="tipoCantidad" use="optional" default="1" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoCantidad">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoReacondicionado"/>
+</xs:schema>

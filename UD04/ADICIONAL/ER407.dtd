@@ -1,0 +1,4 @@
+<!ELEMENT deportistas (deportista+)>
+<!ELEMENT deportista (deporte, nombre)>
+<!ELEMENT deporte (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>

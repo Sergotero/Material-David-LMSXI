@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE equipos_de_baloncesto SYSTEM "ER409.dtd">
+<equipos_de_baloncesto>
+    <equipo>
+        <nombre>Ángeles Lakers</nombre>
+        <ciudad>Los Ángeles</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+          <jugador posicion="Pivot">
+            <nombre>LeBrom James</nombre>
+            <nacionalidad>Estadounidense</nacionalidad>
+          </jugador>
+          <jugador posicion="Base">
+            <nombre>Patrick Beverley</nombre>
+            <nacionalidad>Estadounidense</nacionalidad>
+          </jugador>
+        </jugadores>
+      </equipo>
+      <equipo>
+        <nombre>Boston Celtics</nombre>
+        <ciudad>Boston</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+          <jugador posicion="Alero">
+            <nombre>Jaylen Brown</nombre>
+            <nacionalidad>Estadounidense</nacionalidad>
+          </jugador>
+          <jugador posicion="Pivot">
+            <nombre>Robert Williams</nombre>
+            <nacionalidad>Camerunés</nacionalidad>
+          </jugador>
+        </jugadores>
+      </equipo>
+</equipos_de_baloncesto>

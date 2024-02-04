@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<!DOCTYPE agenda>
+<agenda>
+  <contacto>
+    <persona>
+      <nombre>Inés</nombre>
+      <apellido1>López</apellido1>
+      <apellido2>Pérez</apellido2>
+    </persona>
+    <direccion>
+      <calle>Calle Rosalía de Castro</calle> 
+      <numero>210</numero>
+      <piso>3</piso>
+      <letra>A</letra>
+      <localidad>Santiago</localidad>
+      <cp>15702</cp>
+    </direccion>
+    <telefonos>
+      <telefono tipo="movil">666777888</telefono>
+      <telefono tipo="casa">981001122</telefono>
+    </telefonos>
+  </contacto> 
+  <contacto>
+    <persona>
+      <nombre>Javier</nombre>
+      <apellido1>López</apellido1>
+      <apellido2>Pérez</apellido2>
+    </persona>
+    <direccion>
+      <calle>Calle Santiago de Chile</calle> 
+      <numero>44</numero>
+      <piso>1</piso>
+      <letra>B</letra>
+      <localidad>Santiago</localidad>
+      <cp>15701</cp>
+    </direccion>
+    <telefonos>
+      <telefono tipo="movil">666999000</telefono>
+      <telefono tipo="trabajo">981332211</telefono>
+    </telefonos>
+  </contacto> 
+</agenda>

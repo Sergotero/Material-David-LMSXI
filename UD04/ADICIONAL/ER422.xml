@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<unidad-almacenamiento letra="C" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="ER422.xsd">
+  <directorio nombre="Archivos de programa" propietario="PC" creado="2022-01-11T05:12:03" modificado="2022-01-11T05:12:03">
+    <directorio nombre="Windows Defender" propietario="PC" creado="2022-01-11T05:12:03" modificado="2022-04-08T07:45:23">
+      <fichero creado="2022-01-11T05:12:03" modificado="2023-01-25T13:00:25" propietario="PC">
+        <nombre extension="exe">ConfigSecurityPolicy.exe</nombre>
+        <tamano unidades="KB">298</tamano>
+      </fichero>
+    </directorio>
+  </directorio>
+  <directorio nombre="Archivos de programa (x86)" propietario="PC" creado="2022-01-11T05:12:03" modificado="2023-01-25T13:00:25">
+  </directorio>
+  <directorio nombre="Usuarios" propietario="PC" creado="2022-01-11T05:12:03" modificado="2023-01-25T13:00:25">
+  </directorio>
+  <directorio nombre="Windows" propietario="PC" creado="2022-01-11T05:12:03" modificado="2022-06-23T10:45:33">
+    <fichero creado="2022-01-11T05:12:03" modificado="2022-05-19T16:03:12" propietario="PC">
+      <nombre extension="exe">explorer.exe</nombre>
+      <tamano unidades="KB">4973</tamano>
+    </fichero>
+    <fichero creado="2022-01-11T05:12:03" modificado="2022-08-14T01:34:57" propietario="PC">
+      <nombre extension="exe">regedit.exe</nombre>
+      <tamano unidades="KB">388</tamano>
+    </fichero>
+    <fichero creado="2022-01-11T05:12:03" modificado="2022-12-29T20:05:02" propietario="SYSTEM">
+      <nombre extension="ini">system.ini</nombre>
+      <tamano unidades="B">1000</tamano>
+    </fichero> 
+  </directorio>
+</unidad-almacenamiento>

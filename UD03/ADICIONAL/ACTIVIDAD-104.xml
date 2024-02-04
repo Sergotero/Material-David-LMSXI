@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE modulo> 
+<modulo>
+  <nombre>Lenguajes de Marcas y Sistemas de Gestión de Información</nombre>
+  <ciclo siglas="DAM">Desarrolo de aplicaciones multiplataforma</ciclo>
+  <sesiones duracion="60" periodo="semanal">5</sesiones>
+  <caracter>Obligatorio</caracter>
+  <fechas>
+    <inicio>
+      <dia>12</dia>
+      <mes>septiembre</mes>
+      <ano>2022</ano>
+    </inicio>
+    <fin>
+      <dia>21</dia>
+      <mes>junio</mes>
+      <ano>2023</ano>
+    </fin>
+  </fechas>
+  <alumnado>
+    <alumno genero="M" faltas="0">
+        <nombre>Ana</nombre>
+        <apellidos>
+          <apellido>Fernández</apellido>
+          <apellido>Gutiérrez</apellido>
+        </apellidos>
+        <dni>16965696L</dni>
+        <telefono>678201232</telefono>
+        <email>anafg@outlook.com</email>
+        <direccion-postal>
+          <direccion>Avenida Rosalía de Castro</direccion>
+          <numero>22</numero>
+          <cp>15701 </cp>
+          <localidad>Santiago de Compostela</localidad>
+          <provincia>A Coruña</provincia>
+          <comunidad>Galicia</comunidad>
+        </direccion-postal>
+    </alumno>
+    <alumno genero="H" nota="APTO" faltas="0">
+        <nombre>Pepe</nombre>
+        <apellidos>
+          <apellido>Martínez</apellido>
+          <apellido>González</apellido>
+        </apellidos>
+        <dni>98765432H</dni>
+        <telefono>691122334</telefono>
+        <email>pmg@gmail.com</email>
+        <direccion-postal>
+          <direccion>Rúa de Barclona</direccion>
+          <numero>55</numero>
+          <cp>36203</cp>
+          <localidad>Vigo</localidad>
+          <provincia>Pontevedra</provincia>
+          <comunidad>Galicia</comunidad>
+        </direccion-postal>
+    </alumno>
+  </alumnado>
+</modulo>

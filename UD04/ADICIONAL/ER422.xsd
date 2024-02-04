@@ -1,0 +1,81 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="unidad-almacenamiento" type="unidad-almacenamiento"></xs:element>
+
+  <xs:complexType name="unidad-almacenamiento">
+    <xs:complexContent>
+      <xs:extension base="contenido-directorio">
+        <xs:attribute name="letra" type="unidad-letra" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="directorio">
+    <xs:complexContent>
+      <xs:extension base="contenido-directorio">
+        <xs:attribute name="nombre" type="xs:string" use="required" />
+        <xs:attributeGroup ref="metadatos-basicos"></xs:attributeGroup>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="contenido-directorio">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="directorio" type="directorio"></xs:element>
+        <xs:element name="fichero" type="fichero"></xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fichero">
+    <xs:sequence>
+      <xs:element name="nombre" type="nombre"></xs:element>
+      <xs:element name="tamano" type="tamano"></xs:element>
+    </xs:sequence>
+    <xs:attributeGroup ref="metadatos-basicos"></xs:attributeGroup>
+  </xs:complexType>
+
+  <xs:attributeGroup name="metadatos-basicos">
+    <xs:attribute name="propietario" type="xs:string" use="required" />
+    <xs:attribute name="creado" type="xs:dateTime" use="required" />
+    <xs:attribute name="modificado" type="xs:dateTime" use="required" />
+  </xs:attributeGroup>
+
+  <xs:complexType name="nombre">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="extension" type="xs:string" use="required"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="unidad-letra">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="fichero-tamano">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tamano">
+    <xs:simpleContent>
+      <xs:extension base="fichero-tamano">
+        <xs:attribute name="unidades" type="unidades" use="required"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="unidades">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="B"></xs:enumeration>
+      <xs:enumeration value="KB"></xs:enumeration>
+      <xs:enumeration value="MB"></xs:enumeration>
+      <xs:enumeration value="GB"></xs:enumeration>
+      <xs:enumeration value="TB"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

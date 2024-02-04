@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<alumnado 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="ER425.xsd">
+  <alumna>
+    <nombre>Ana</nombre>
+    <apellidos>
+      <apellido>Martínez</apellido>
+      <apellido>Pérez</apellido>
+    </apellidos>
+    <direccion>
+      <domicilio>C/ Rosalía de Castro 12</domicilio>
+      <codigo-postal cp="15001" />
+      <localidad>Santiago de Compostela</localidad>
+      <provincia>A Coruña</provincia>
+    </direccion>
+    <contacto>
+      <telefono tipo="casa">966778899</telefono>
+      <email tipo="personal">correo@hotmail.com</email>
+    </contacto>
+  </alumna>
+  <alumno>
+    <nombre>Jose</nombre>
+    <apellidos>
+      <apellido>López</apellido>
+      <apellido>Pérez</apellido>
+    </apellidos>
+    <direccion>
+      <domicilio>Avenida Fragoso 45</domicilio>
+      <codigo-postal cp="36002" />
+      <localidad>Vigo</localidad>
+      <provincia>Pontevedra</provincia>
+    </direccion>
+    <contacto>
+      <telefono tipo="personal">666777999</telefono>
+      <email tipo="instituto">correo@edu.xunta.gal</email>
+    </contacto>
+  </alumno>
+</alumnado>

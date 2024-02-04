@@ -1,0 +1,72 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumnado" type="alumnado" />
+
+  <xs:complexType name="alumnado">
+    <xs:sequence>
+      <xs:choice minOccurs="2" maxOccurs="unbounded">
+        <xs:element name="alumno" type="alumno" />
+        <xs:element name="alumna" type="alumno" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="alumno">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="apellidos" type="apellidos" />
+      <xs:element name="direccion" type="direccion" />
+      <xs:element name="contacto" type="contacto" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="apellidos">
+    <xs:sequence>
+      <xs:element name="apellido" minOccurs="1" maxOccurs="2" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element name="domicilio" type="xs:string" />
+      <xs:element name="codigo-postal">
+        <xs:complexType>
+          <xs:attribute name="cp" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="localidad" type="xs:string" />
+      <xs:element name="provincia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contacto">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="telefono" type="telefono" />
+        <xs:element name="email" type="email" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="telefono">
+    <xs:simpleContent>
+      <xs:extension base="tel">
+        <xs:attribute name="tipo" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="tel">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[679][0-9]{8}"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="email">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="tipo" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,87 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="svg" type="tipoSvg" />
+
+  <xsd:complexType name="tipoSvg">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="rect" type="tipoRect"/>
+        <xsd:element name="circle" type="tipoCircle"/>
+        <xsd:element name="path" type="tipoPath"/>
+        <xsd:element name="line" type="tipoLine"/>
+        <xsd:element name="polyline" type="tipoPoly"/>
+        <xsd:element name="polygon" type="tipoPoly" />
+        <xsd:element name="ellipse" type="tipoEllipse"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:string" />
+    <xsd:attributeGroup ref="grupoWH" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoRect">
+    <xsd:attributeGroup ref="grupoXY" />
+    <xsd:attributeGroup ref="grupoWH" />
+    <xsd:attributeGroup ref="grupoFill" />
+    <xsd:attributeGroup ref="grupoStrokeS" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoCircle">
+    <xsd:attributeGroup ref="grupoCXCY" />
+    <xsd:attribute name="r" type="xsd:string" />
+    <xsd:attributeGroup ref="grupoFill" />
+    <xsd:attributeGroup ref="grupoStroke" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoPath">
+    <xsd:attributeGroup ref="grupoFill" />
+    <xsd:attribute name="d" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoLine">
+    <xsd:attributeGroup ref="grupoStrokeS" />
+    <xsd:attribute name="x1" type="xsd:string" />
+    <xsd:attribute name="x2" type="xsd:string" />
+    <xsd:attribute name="y1" type="xsd:string" />
+    <xsd:attribute name="y2" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoPoly">
+    <xsd:attributeGroup ref="grupoFill" />
+    <xsd:attribute name="points" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="tipoEllipse">
+    <xsd:attributeGroup ref="grupoFill" />
+    <xsd:attribute name="cx" type="xsd:string" />
+    <xsd:attribute name="cy" type="xsd:string" />
+    <xsd:attribute name="rx" type="xsd:string" />
+    <xsd:attribute name="ry" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:attributeGroup name="grupoWH">
+    <xsd:attribute name="width" type="xsd:string" />
+    <xsd:attribute name="height" type="xsd:string" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="grupoXY">
+    <xsd:attribute name="x" type="xsd:string" />
+    <xsd:attribute name="y" type="xsd:string" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="grupoFill">
+    <xsd:attribute name="fill" type="xsd:string" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="grupoCXCY">
+    <xsd:attribute name="cx" type="xsd:string" />
+    <xsd:attribute name="cy" type="xsd:string" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="grupoStroke">
+    <xsd:attribute name="stroke" type="xsd:string" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="grupoStrokeS">
+    <xsd:attributeGroup ref="grupoStroke" />
+    <xsd:attribute name="stroke-width" type="xsd:string" />
+  </xsd:attributeGroup>
+</xsd:schema>
