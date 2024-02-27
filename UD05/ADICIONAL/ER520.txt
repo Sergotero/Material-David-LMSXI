@@ -1,0 +1,26 @@
+1	Los comentarios.
+	//comment()
+2	Los comentarios de la película Leaving Las Vegas.
+	/videoteca/pelicula[titulo="Leaving Las Vegas"]/comment()
+3	Las películas de género Drama.
+	/videoteca/pelicula[genero="Drama"]
+4	Los nombres de las actrices.
+	/videoteca/actor[sexo="mujer"]/nome/text()
+5	Los elementos que continen algún texto (elemento no vacíos).
+	//*[exists(text())]
+6	Las películas en las que el título sea igual al título original.
+	/videoteca/pelicula[titulo = titulooriginal]
+7	Los atributos id correspondiente a la actriz Elisabeth Shue.
+	/videoteca/actor[nome="Elisabeth Shue"]/@id
+8	Los títulos de las películas en las que participó un actor del atributo id=51.
+	/videoteca/pelicula[actua/@id="51"]/titulo/text()
+9	Obten los títulos de las películas en las que participó la actriz con nombre Elisabeth Shue.
+	/videoteca/pelicula[actua/@id=/videoteca/actor[nome="Elisabeth Shue"]/@id]/titulo/text()
+10	El título de la última película del documento.
+	//pelicula[last()]/titulo/text()
+11	La suma de los importes de aquellas películas cuyo importe venga en dólares.
+	sum(/videoteca/pelicula/importe[@moneda="dólar"])
+12	La suma (en euros) de los importes de las películas. Consideramos un cambio de 1€ = 1,4$.
+	sum((sum(/videoteca/pelicula/importe[@moneda="dólar"]/(text()*1.4)), sum(/videoteca/pelicula/importe[@moneda="euro"])))
+13	Si modificáramos el XML anterior de forma que el nodo <actor> de Elisabeth Shue se llamara <actriz>, ¿cuál sería la expresión si quieramos obtener el nombre de los actores que han compartido película con Elisabeth Shue?
+	/videoteca/actor[@id=/videoteca/pelicula[actua/@id=/videoteca/actriz[nome="Elisabeth Shue"]/@id]/actua/@id]/nome/text()

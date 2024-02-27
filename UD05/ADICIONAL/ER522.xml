@@ -1,0 +1,99 @@
+<formula1>
+  <equipos>
+    <equipo>
+      <nombre>Mercedes-AMG Petronas F1 Team</nombre>
+      <motorista id="1"/>
+      <temporada>
+        <año>2020</año>
+        <piloto id="1"/>
+        <piloto id="2"/>
+      </temporada>
+      <temporada>
+        <año>2021</año>
+        <piloto id="1"/>
+        <piloto id="2"/>
+      </temporada>
+    </equipo>
+    <equipo>
+      <nombre>Red Bull Racing Honda</nombre>
+      <motorista id="2"/>
+      <temporada>
+        <año>2012</año>
+        <piloto id="6"/>
+        <piloto id="4"/>
+      </temporada>
+      <temporada>
+        <año>2020</año>
+        <piloto id="3"/>
+        <piloto id="4"/>
+      </temporada>
+      <temporada>
+        <año>2021</año>
+        <piloto id="3"/>
+        <piloto id="5"/>
+      </temporada>
+    </equipo>
+    <equipo>
+      <nombre>Scuderia Ferrari</nombre>
+      <motorista id="3"/>
+      <temporada>
+        <año>2020</año>
+        <piloto id="6"/>
+        <piloto id="7"/>
+      </temporada>
+      <temporada>
+        <año>2021</año>
+        <piloto id="7"/>
+        <piloto id="8"/>
+      </temporada>
+    </equipo>
+  </equipos>
+  <pilotos>
+    <piloto id="1">
+      <nombre>Lewis Hamilton</nombre>
+      <edad>37</edad>
+    </piloto>
+    <piloto id="2">
+      <nombre>Valtteri Bottas</nombre>
+      <edad>32</edad>
+    </piloto>
+    <piloto id="3">
+      <nombre>Max Verstappen</nombre>
+      <edad>24</edad>
+    </piloto>
+    <piloto id="4">
+      <nombre>Alexander Albon</nombre>
+      <edad>25</edad>
+    </piloto>
+    <piloto id="5">
+      <nombre>Sergio Pérez</nombre>
+      <edad>31</edad>
+    </piloto>
+    <piloto id="6">
+      <nombre>Sebastian Vettel</nombre>
+      <edad>34</edad>
+    </piloto>
+    <piloto id="7">
+      <nombre>Charles Leclerc</nombre>
+      <edad>23</edad>
+    </piloto>
+    <piloto id="8">
+      <nombre>Carlos Sainz Jr.</nombre>
+      <edad>27</edad>
+    </piloto>
+  </pilotos>
+  <motoristas>
+    <motorista id="1">
+      <nombre>Mercedes-Benz</nombre>
+      <año_fundacion>1926</año_fundacion>
+    </motorista>
+    <motorista id="2">
+      <nombre>Honda</nombre>
+      <año_fundacion>1948</año_fundacion>
+    </motorista>
+    <motorista id="3">
+      <nombre>Ferrari</nombre>
+      <año_fundacion>1947</año_fundacion>
+    </motorista>
+  </motoristas>
+</formula1>

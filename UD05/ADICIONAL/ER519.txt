@@ -1,0 +1,10 @@
+1	Nombre de los ríos.
+	/geografia/rios/rio/nombre/text()
+2	Idiomas de las repúblicas.
+	/geografia/paises/pais[sistema="república"]/@nombre
+3	Países que tienen por lengua el español.
+	/geografia/paises/pais[idioma="español"]/@nombre
+4	Tamaños de los países por donde pasa el Bidasoa.
+	/geografia/rios/rio[nombre="Bidasoa"]/pais/text()
+5	Ríos de Europa.
+	/geografia/rios/rio[pais=/geografia/continentes/continente[@nombre="Europa"]/pais]/nombre/text()

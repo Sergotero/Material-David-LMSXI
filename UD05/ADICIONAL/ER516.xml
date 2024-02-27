@@ -1,67 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE agenda>
-<agenda>
-  <propietario>
-    <identificadores>
-      <nombre>Alma</nombre>
-      <apellidos>López Terán</apellidos>
-    </identificadores>
-    <direccion>
-      <calle>El Percebe 13, 6F</calle>
-      <localidad>Torrelavega</localidad>
-      <cp>39300</cp>
-    </direccion>
-    <telefonos>
-      <movil>970898765</movil>
-      <casa>942124567</casa>
-      <trabajo>628983456</trabajo>
-    </telefonos>
-  </propietario>
-  <contactos>
-    <persona id="p01">
-      <identificadores>
-        <nombre>Inés</nombre>
-        <apellidos>López Pérez</apellidos>
-      </identificadores>
-      <direccion>
-        <calle>El Ranchito 24, 6B</calle>
-        <localidad>Santander</localidad>
-        <cp>39006</cp>
-      </direccion>
-      <telefonos>
-        <movil>970123123</movil>
-      </telefonos>
-    </persona>
-    <persona id="p02">
-      <identificadores>
-        <nombre>Roberto</nombre>
-        <apellidos>Gutiérrez Gómez</apellidos>
-      </identificadores>
-      <direccion>
-        <calle>El Marranito 4, 2F</calle>
-        <localidad>Santander</localidad>
-        <cp>39004</cp>
-      </direccion>
-      <telefonos>
-        <movil>970987456</movil>
-        <casa>942333323</casa>
-      </telefonos>
-    </persona>
-    <persona id="p03">
-      <identificadores>
-        <nombre>Juan</nombre>
-        <apellidos>Sánchez Martínez</apellidos>
-      </identificadores>
-      <direccion>
-        <calle>El Cangrejo 10, sn</calle>
-        <localidad>Torrelavega</localidad>
-        <cp>39300</cp>
-      </direccion>
-      <telefonos>
-        <movil>997564343</movil>
-        <casa>942987974</casa>
-        <trabajo>677899234</trabajo>
-      </telefonos>
-    </persona>
-  </contactos>
-</agenda>
+<?xml-stylesheet type="text/xsl" href="ER516.xsl"?>
+<catalogo>
+  <libro id="bk101">
+    <autor>Gambardella, Mateo</autor>
+    <titulo>Guía del desarrollador de XML</titulo>
+    <genero>Computadora</genero>
+    <precio>44,95</precio>
+    <fecha_de_publicacion>2000-10-01</fecha_de_publicacion>
+    <description>Una mirada en profundidad a la creación de aplicaciones
+      con XML.</description>
+  </libro>
+  <libro id="bk102">
+    <autor>Rey, Esteban</autor>
+    <titulo>La Torre Oscura: El Pistolero</titulo>
+    <genero>Fantasía</genero>
+    <precio>5,95</precio>
+    <fecha_de_publicacion>10-12-1982</fecha_de_publicacion>
+    <description>En el primer libro de esta brillante serie, Stephen King presenta a los lectores uno de sus
+      héroes más enigmáticos, Roland de Gilead, El último pistolero. Es una figura inquietante,
+      un solitario en un fascinante viaje hacia el bien y el mal. En su mundo desolado, que
+      refleja aterradoramente el nuestro, Roland persigue al Hombre de Negro, se encuentra con una mujer seductora llamada Alice,
+      y comienza una amistad con el Niño de la Tierra llamado Jake. Tanto apasionantemente realista como inquietantemente onírico,
+      The Gunslinger deja a los lectores esperando ansiosamente el próximo capítulo.</description>
+  </libro>
+  <libro id="bk103">
+    <autor>Haldeman, Joe</autor>
+    <titulo>La guerra eterna</titulo>
+    <género>Ciencia ficción</género>
+    <precio>6,95</precio>
+    <fecha_de_publicacion>1974-12-03</fecha_de_publicacion>
+    <description>Los líderes de la Tierra han trazado una línea en la arena interestelar, a pesar de que la feroz
+      El enemigo alienígena al que se opondrían es inescrutable, invencible y muy lejano. Un recluta reacio
+      reclutado en una unidad militar de élite, el soldado William Mandella ha sido impulsado a través del espacio y el tiempo para
+      luchar en el lejano conflicto de los mil años; cumplir sus deberes sin rencor e incluso levantarse por
+      rangos militares. privado Mandella está dispuesta a hacer lo que sea necesario para sobrevivir a la terrible experiencia y regresar a casa.
+      Pero el "hogar" puede ser incluso más aterrador que la batalla, ya que, gracias a la dilatación del tiempo provocada por el espacio
+      viaje, Mándela está envejeciendo meses mientras que la Tierra que dejó atrás está envejeciendo siglos.</description>
+  </libro>
+  <libro id="bk104">
+    <autor>Rothfuss, Patricio</autor>
+    <titulo>El Nombre del Viento</titulo>
+    <genero>Fantasía</genero>
+    <precio>7,95</precio>
+    <fecha_de_publicacion>2001-03-10</fecha_de_publicacion>
+    <description>Contada con la propia voz de Kvothe, esta es la historia del joven dotado mágicamente que
+      crece hasta convertirse en el mago más notorio que su mundo haya visto jamás. Una historia de acción escrita con la mano de un poeta,
+      El nombre del viento es una obra maestra que transportará a los lectores al cuerpo y la mente.
+      de un mago.</description>
+  </libro>
+  <libro id="bk105">
+    <autor>Kurzweil, Ray</autor>
+    <titulo>Cómo crear una mente</titulo>
+    <género>Ciencia</género>
+    <precio>14,99</precio>
+    <fecha_de_publicacion>2012-11-13</fecha_de_publicacion>
+    <description> En Cómo crear una mente, Kurzweil presenta una provocativa exploración del proyecto más importante
+      en la civilización humano-máquina: ingeniería inversa del cerebro para comprender con precisión cómo funciona y usar
+      ese conocimiento para crear máquinas aún más inteligentes.</description>
+  </libro>
+</catalogo>

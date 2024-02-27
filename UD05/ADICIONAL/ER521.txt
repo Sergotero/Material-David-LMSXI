@@ -1,0 +1,16 @@
+1	Nombres de los pilotos que corrieron para el equipo Mercedes-AMG Petronas F1 Team en 2020.
+	/formula1/pilotos/piloto[@id=/formula1/equipos/equipo[nombre="Mercedes-AMG Petronas F1 Team"]/temporada[año="2020"]/piloto/@id]/nombre/text()
+2	Nombres de los pilotos que corrieron para equipos que utilizaron motoristas fundados después de 1947.
+	/formula1/pilotos/piloto[@id=/formula1/equipos/equipo[motorista/@id=/formula1/motoristas/motorista[año_fundacion > 1947]/@id]/temporada/piloto/@id]/nombre/text()
+3	Nombres de los equipos que utilizaron motoristas fundados después de 1940.
+	/formula1/equipos/equipo[motorista/@id=/formula1/motoristas/motorista[año_fundacion>1940]/@id]/nombre/text()
+4	Nombres de los pilotos que corrieron en 2021.
+	/formula1/pilotos/piloto[@id=/formula1/equipos/equipo/temporada[año="2021"]/piloto/@id]/nombre/text()
+5	Nombres de los motoristas que trabajaron con Sebastian Vettel.
+	/formula1/motoristas/motorista[@id=/formula1/equipos/equipo[temporada/piloto/@id=/formula1/pilotos/piloto[nombre="Sebastian Vettel"]/@id]/motorista/@id]/nombre/text()
+6	Nombre de los compañeros de equipo que ha tenido Sebastian Vettel (puede aparecer el propio Sebastian).
+	/formula1/pilotos/piloto[@id=/formula1/equipos/equipo/temporada[piloto/@id=/formula1/pilotos/piloto[nombre="Sebastian Vettel"]/@id]/piloto/@id]/nombre/text()
+7	Nombre de los compañeros de equipo que ha tenido Sebastian Vettel (sin que aparezca el propio Sebastian).
+	/formula1/pilotos/piloto[@id=/formula1/equipos/equipo/temporada[piloto/@id=/formula1/pilotos/piloto[nombre="Sebastian Vettel"]/@id]/piloto/@id[.!=/formula1/pilotos/piloto[nombre="Sebastian Vettel"]/@id]]/nombre/text()
+8	Media de las edades de los pilotos que participaron en la temporada 2021.
+	avg(/formula1/pilotos/piloto[@id=/formula1/equipos/equipo/temporada[año="2021"]/piloto/@id]/edad/text())

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ER517A.xsl"?>
+<android>
+  <aplicaciones>
+    <app id="a01">
+      <titulo>WhatsApp Messenger</titulo>
+      <categoria>Comunicación</categoria>
+      <pegi>+3</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>WhatsApp Inc.</desarrollador>
+      <ultima-actualizacion>15 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a02">
+      <titulo>Instagram</titulo>
+      <categoria>Redes sociales</categoria>
+      <pegi>+12</pegi>
+      <descargas>1.000.000.000+</descargas>
+      <desarrollador>Instagram</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a03">
+      <titulo>YouTube</titulo>
+      <categoria>Entretenimiento</categoria>
+      <pegi>+12</pegi>
+      <descargas>5.000.000.000+</descargas>
+      <desarrollador>Google LLC</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a04">
+      <titulo>Facebook</titulo>
+      <categoria>Redes sociales</categoria>
+      <pegi>+12</pegi>
+      <descargas>5.000.000.000+</descargas>
+      <desarrollador>Facebook</desarrollador>
+      <ultima-actualizacion>12 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a05">
+      <titulo>TikTok</titulo>
+      <categoria>Entretenimiento</categoria>
+      <pegi>+12</pegi>
+      <descargas>1.000.000.000+</descargas>
+      <desarrollador>TikTok Pte. Ltd.</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a06">
+      <titulo>Netflix</titulo>
+      <categoria>Entretenimiento</categoria>
+      <pegi>+12</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>Netflix, Inc.</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a07">
+      <titulo>Twitter</titulo>
+      <categoria>Redes sociales</categoria>
+      <pegi>+12</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>Twitter, Inc.</desarrollador>
+      <ultima-actualizacion>13 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a08">
+      <titulo>WhatsApp Business</titulo>
+      <categoria>Negocios</categoria>
+      <pegi>+3</pegi>
+      <descargas>100.000.000+</descargas>
+      <desarrollador>WhatsApp Inc.</desarrollador>
+      <ultima-actualizacion>15 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a09">
+      <titulo>Google Maps</titulo>
+      <categoria>Viajes y guías</categoria>
+      <pegi>+3</pegi>
+      <descargas>5.000.000.000+</descargas>
+      <desarrollador>Google LLC</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a10">
+      <titulo>Zoom Cloud Meetings</titulo>
+      <categoria>Negocios</categoria>
+      <pegi>+3</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>Zoom Video Communications, Inc.</desarrollador>
+      <ultima-actualizacion>13 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a11">
+      <titulo>Google Drive</titulo>
+      <categoria>Productividad</categoria>
+      <pegi>+3</pegi>
+      <descargas>1.000.000.000+</descargas>
+      <desarrollador>Google LLC</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a12">
+      <titulo>Microsoft Teams</titulo>
+      <categoria>Negocios</categoria>
+      <pegi>+3</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>Microsoft Corporation</desarrollador>
+      <ultima-actualizacion>15 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a13">
+      <titulo>LinkedIn</titulo>
+      <categoria>Negocios</categoria>
+      <pegi>+12</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>LinkedIn</desarrollador>
+      <ultima-actualizacion>13 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a14">
+      <titulo>Google Chrome</titulo>
+      <categoria>Comunicación</categoria>
+      <pegi>+3</pegi>
+      <descargas>5.000.000.000+</descargas>
+      <desarrollador>Google LLC</desarrollador>
+      <ultima-actualizacion>13 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a15">
+      <titulo>Telegram</titulo>
+      <categoria>Comunicación</categoria>
+      <pegi>+12</pegi>
+      <descargas>500.000.000+</descargas>
+      <desarrollador>Telegram FZ-LLC</desarrollador>
+      <ultima-actualizacion>15 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a16">
+      <titulo>Adobe Photoshop Express</titulo>
+      <categoria>Fotografía</categoria>
+      <pegi>+3</pegi>
+      <descargas>100.000.000+</descargas>
+      <desarrollador>Adobe</desarrollador>
+      <ultima-actualizacion>12 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a17">
+      <titulo>Shazam</titulo>
+      <categoria>Música y audio</categoria>
+      <pegi>+12</pegi>
+      <descargas>100.000.000+</descargas>
+      <desarrollador>Apple, Inc.</desarrollador>
+      <ultima-actualizacion>14 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a18">
+      <titulo>Amazon Shopping</titulo>
+      <categoria>Compras</categoria>
+      <pegi>+3</pegi>
+      <descargas>100.000.000+</descargas>
+      <desarrollador>Amazon Mobile LLC</desarrollador>
+      <ultima-actualizacion>15 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a19">
+      <titulo>Waze</titulo>
+      <categoria>Viajes y guías</categoria>
+      <pegi>+3</pegi>
+      <descargas>100.000.000+</descargas>
+      <desarrollador>Waze</desarrollador>
+      <ultima-actualizacion>12 de abril de 2023</ultima-actualizacion>
+    </app>
+    <app id="a20">
+      <titulo>Candy Crush Saga</titulo>
+      <categoria>Juegos</categoria>
+      <pegi>+3</pegi>
+      <descargas>1.000.000.000+</descargas>
+      <desarrollador>King</desarrollador>
+      <ultima-actualizacion>13 de abril de 2023</ultima-actualizacion>
+    </app>
+  </aplicaciones>
+  <usuarios>
+    <usuario id="u01" version-android="11">
+      <nombre>Juan Pérez</nombre>
+      <nick>perez90</nick>
+      <fecha-nacimiento>1990-04-15</fecha-nacimiento>
+      <apps>
+        <app id="a01"/>
+        <app id="a07"/>
+        <app id="a09"/>
+      </apps>
+    </usuario>
+    <usuario id="u02" version-android="10">
+      <nombre>María González</nombre>
+      <nick>gnz-98</nick>
+      <fecha-nacimiento>1998-06-10</fecha-nacimiento>
+      <apps>
+        <app id="a19"/>
+        <app id="a16"/>
+      </apps>
+    </usuario>
+    <usuario id="u03" version-android="12">
+      <nombre>Pablo Ruiz</nombre>
+      <nick>pablo.r</nick>
+      <fecha-nacimiento>1987-11-02</fecha-nacimiento>
+      <apps>
+        <app id="a01"/>
+        <app id="a03"/>
+        <app id="a04"/>
+      </apps>
+    </usuario>
+    <usuario id="u04" version-android="11">
+      <nombre>Sofía Díaz</nombre>
+      <nick>sofia95</nick>
+      <fecha-nacimiento>1995-08-20</fecha-nacimiento>
+      <apps>
+        <app id="a11"/>
+        <app id="a08"/>
+      </apps>
+    </usuario>
+    <usuario id="u05" version-android="9">
+      <nombre>Luisa Gómez</nombre>
+      <nick>luisa_gomez</nick>
+      <fecha-nacimiento>1982-03-25</fecha-nacimiento>
+      <apps>
+        <app id="a05"/>
+        <app id="a06"/>
+        <app id="a07"/>
+        <app id="a08"/>
+      </apps>
+    </usuario>
+    <usuario id="u06" version-android="12">
+      <nombre>Carlos Ramírez</nombre>
+      <nick>carlos7</nick>
+      <fecha-nacimiento>1978-12-01</fecha-nacimiento>
+      <apps>
+        <app id="a20"/>
+      </apps>
+    </usuario>
+  </usuarios>
+</android>

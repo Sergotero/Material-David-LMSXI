@@ -1,0 +1,56 @@
+En los siguientes apartados, para cada dato solicitado, se muestran varias alternativas de expresiones XPath.	
+	
+Se debe prestar especial atención a cuando se solicitan elementos o datos:	
+	
+Cuando se solicitan datos, se utilizará la función text().	
+Cuando se solicitan elementos, no se utilizará la función text() u otra que permita obtener los datos de un elemento.	
+Las propuestas de solución son las siguientes:	
+	
+1	Extraer todos los elementos <producto>.
+	/productos/producto
+	//producto
+2	Extraer todos los elementos <talla> del producto con nombre Camiseta.
+	/productos/producto[nombre = 'Camiseta']/tallas/talla
+	//producto[nombre = 'Camiseta']//talla
+3	Precio del producto con nombre Zapatos.
+	/productos/producto[nombre = 'Zapatos']/precio/text()
+	//producto[nombre = 'Zapatos']/precio/text()
+4	Todos los elementos <nombre> de los productos cuyo precio es mayor o igual a 15.
+	/productos/producto[precio >= 15]/nombre
+	//producto[precio >= 15]/nombre
+5	Todos los elementos <talla> de todos los productos.
+	/productos/producto/tallas/talla
+	//talla
+6	El nombre del producto con el precio más alto.
+	/productos/producto[precio=max(/productos/producto/precio)]/nombre/text()
+	/productos/producto[not(precio < /productos/producto/precio)]/nombre/text()
+	//producto[not(precio < //producto/precio)]//nombre/text()
+7	El precio promedio de todos los productos.
+	avg(/productos/producto/precio)
+	avg(//precio)
+	sum(//producto/precio) div count(//producto)
+8	Todos los nombres de los productos cuyo nombre comienza por P.
+	/productos/producto[starts-with(nombre,'P')]/nombre/text()
+	//producto[starts-with(nombre,'P')]/nombre/text()
+9	Todos los elementos <nombre> de los productos cuya descripción contiene la palabra deportiva.
+	/productos/producto[contains(descripcion,'deportiva')]/nombre
+	//producto[contains(descripcion,'deportiva')]/nombre
+10	Todos los elementos <talla> de los productos con precio menor a 20.
+	/productos/producto[precio < 20]/tallas/talla
+	//producto[precio < 20]//talla
+11	Todos los elementos <producto> que tengan el atributo categoria igual a ropa.
+	/productos/producto[@categoria = 'ropa']
+	//producto[@categoria = 'ropa']
+12	El precio del producto con nombre Gorra en dólares (USD).
+	/productos/producto[nombre = 'Gorra']/precio[@divisa = 'USD']/text()
+	//producto[nombre = 'Gorra']/precio[@divisa = 'USD']/text()
+13	El nombre de los productos cuyo precio esté en euros (EUR).
+	/productos/producto/precio[@divisa = 'EUR']/../nombre/text()
+	//producto/precio[@divisa = 'EUR']/../nombre/text()
+14	Todas las tallas de los productos con precio mayor a 20 dólares (USD).
+	/productos/producto[precio/@divisa='USD' and precio > 20]/tallas/talla/text()
+	//producto[precio/@divisa='USD' and precio > 20]//talla/text()
+	/productos/producto/precio[@divisa='USD' and text() > 20]/../tallas/talla/text()
+15	El nombre y la descripción de los productos con precio en dólares (USD).
+	/productos/producto/precio[@divisa= 'USD']/../(nombre/text() | descripcion/text())
+	//producto/precio[@divisa= 'USD']/../(nombre/text() | descripcion/text())

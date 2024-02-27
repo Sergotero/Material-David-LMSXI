@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<videoteca fecha-creacion="24/02/2023">
+  <pelicula id="1">
+    <importe moneda="dólar">13.56</importe>
+    <titulo>El santo</titulo>
+    <titulooriginal>The Saint</titulooriginal>
+    <ano>1997</ano>
+    <director>Phillip Noyce</director>
+    <genero>Acción</genero>
+    <duracion>111</duracion>
+    <actua id="51"/> <!--  Elisabeth Shue -->
+    <actua id="156"/> <!--  Val Kilmer -->
+  </pelicula>
+  <pelicula id="3">
+    <importe moneda="euro">22.18</importe>
+    <titulo>Leaving Las Vegas</titulo>
+    <titulooriginal>Leaving Las Vegas</titulooriginal>
+    <ano>1995</ano>
+    <director>Mike Figgis</director>
+    <genero>Drama</genero>
+    <duracion>107</duracion>
+    <actua id="187"/> <!--  Nicolas Cage -->
+    <actua id="51"/> <!--  Elisabeth Shue -->
+  </pelicula>
+  <pelicula id="4">
+    <importe moneda="dólar">11.52</importe>
+    <titulo>¿A quién ama Gilbert Grape?</titulo>
+    <titulooriginal>What's Eating Gilbert Grape?</titulooriginal>
+    <ano>1993</ano>
+    <director>Lasse Hallström</director>
+    <genero>Drama</genero>
+    <duracion>118</duracion>
+    <actua id="139"/> <!--  Johnny Depp  -->
+  </pelicula>
+  <actor id="51">
+    <nome>Elisabeth Shue</nome>
+    <sexo>mujer</sexo>
+    <fecha-nacimiento>06/10/1963</fecha-nacimiento>
+    <url>http://www.imdb.com/name/nm0000223/</url>
+  </actor>
+  <actor id="139">
+    <nome>Johnny Depp</nome>
+    <sexo>hombre</sexo>
+    <fecha-nacimiento>09/06/1963</fecha-nacimiento>
+    <url>http://www.imdb.com/name/nm0000136/</url>
+  </actor>
+  <actor id="156">
+    <nome>Val Kilmer</nome>
+    <sexo>hombre</sexo>
+    <fecha-nacimiento>31/12/1959</fecha-nacimiento>
+  </actor>
+  <actor id="187">
+    <nome>Nicolas Cage</nome>
+    <sexo>hombre</sexo>
+    <fecha-nacimiento>07/01/1964</fecha-nacimiento>
+  </actor>
+</videoteca>
