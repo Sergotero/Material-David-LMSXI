@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ies>
-  <nombre>IES Gonzalo Nzareno</nombre>
-  <web>http://www.gonzalonzareno.org</web>
+  <nombre>IES Canquera</nombre>
+  <web>http://www.iescalquera.org</web>
   <ciclos>
     <ciclo id="ASIR">
       <nombre>Administración de Sistemas Informáticos en Red</nombre>
