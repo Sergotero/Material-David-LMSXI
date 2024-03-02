@@ -4,7 +4,6 @@
         <peso unidad="kg">10</peso>
         <nombre>Ordenador</nombre>
         <lugar edificio="B">
-            <aula>10</aula>
         </lugar>
     </producto>
     <producto codigo="P2">

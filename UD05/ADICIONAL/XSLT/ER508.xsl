@@ -8,6 +8,7 @@
       <body>
         <ul>
           <xsl:for-each select="inventario/producto">
+          <xsl:message expand-text="yes">  DEBUG1 {[name(), @codigo]} </xsl:message>
             <li>
               Elemento
               <xsl:value-of select="./@codigo"/>
