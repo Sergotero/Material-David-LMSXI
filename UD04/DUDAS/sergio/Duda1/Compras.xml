@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE persona SYSTEM "Compras.dtd">
+<persona>
+    <compra>
+        <titulo>Compra1</titulo>
+        <fechaCompra>01/01/2024</fechaCompra>
+        <precio moneda="euro">10</precio>
+        <categoria cod="A000001" descripcion="Cosas de electrónica">
+            <nombreCategoria>Electrónica</nombreCategoria>
+        </categoria>
+        <categoria cod="A000001">
+            <nombreCategoria>Informática</nombreCategoria>
+        </categoria>
+    </compra>
+    <compra>
+        <titulo>Compra2</titulo>
+        <fechaCompra>01/02/2024</fechaCompra>
+        <precio moneda="euro">20</precio>
+        <categoria cod="000003" descripcion="Cosas de vestir">
+            <nombreCategoria>Moda</nombreCategoria>
+        </categoria>
+    </compra>
+    <compra>
+        <titulo>Compra3</titulo>
+        <fechaCompra>01/03/2024</fechaCompra>
+        <precio moneda="euro">30</precio>
+        <categoria cod="000004" descripcion="Cosas para divertirse">
+            <nombreCategoria>Juegos</nombreCategoria>
+        </categoria>
+    </compra>
+</persona>

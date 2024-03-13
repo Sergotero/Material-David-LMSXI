@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Declaración XSD dentro del propio nodo raíz -->
+<unidad-almacenamiento 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+     xs:noNamespaceSchemaLocation="Almacenamiento.xsd" letra="D">
+
+    <directorio nombre="Documentos" propietario="Sergio Otero" fcreacion="2024/02/01" fmodificacion="2024/03/01">
+        <directorio nombre="Prácticas" propietario="Sergio Otero" fcreacion="2024-02-01" fmodificacion="2024-03-01">
+        </directorio>
+        <fichero propietario="Sergio Otero" fcreacion="2024-02-01" fmodificacion="2024-03-01">
+            <nombre extension="doc">Ejercicio1</nombre>
+            <tamano unidad="KB">12</tamano>    
+        </fichero>
+    </directorio>
+    <fichero propietario="Sergio Otero" fcreacion="2024-02-01" fmodificacion="2024-03-01">
+        <nombre extension="mp3">Audio1</nombre>
+        <tamano unidad="MB">16</tamano>    
+    </fichero>
+
+</unidad-almacenamiento>

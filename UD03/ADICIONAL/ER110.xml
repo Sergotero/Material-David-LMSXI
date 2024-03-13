@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <compras>
+    <!-- Con respecto a categoría: -->
     <compra>
         <titulo>Agua</titulo>
         <fecha>15/09/2022</fecha>
@@ -13,7 +14,7 @@
         <titulo>Bolígrafo</titulo>
         <fecha>19/09/2022</fecha>
         <categorias>
-            <categoria>Papelería</categoria>
+            <categoria codigo="665363" descripcion="Papelería"/>
         </categorias>
         <precio>1,45</precio>
     </compra>
@@ -22,6 +23,7 @@
         <fecha>19/09/2022</fecha>
         <categorias>
             <categoria>Transporte</categoria>
+            <categoria codigo="665363">Papelería</categoria>
             <categoria>Tren</categoria>
         </categorias>
         <precio>8,90</precio>

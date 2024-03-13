@@ -6,7 +6,7 @@
       <xs:extension base="contenido-directorio">
         <xs:attribute name="letra" type="unidad-letra" use="required" />
       </xs:extension>
-    </xs:complexContent>
+    </xs:>
   </xs:complexType>
 
   <xs:complexType name="directorio">

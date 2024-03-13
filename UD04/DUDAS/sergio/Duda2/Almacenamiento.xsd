@@ -1,0 +1,75 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición del elemento RAÍZ con sus elementos hijos -->
+    <xs:element name="unidad-almacenamiento">
+        <xs:complexType>
+            <!-- Definición de los elementos que lo componen -->
+            <xs:sequence>
+                <xs:element name="directorio" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="fichero"/>
+            </xs:sequence>
+            <!-- Definición de los atributos del elemento raíz -->
+            <xs:attribute name="letra" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element> 
+
+    <!-- Definición del elemento DIRECTORIO -->
+    <xs:element name="directorio">
+        <xs:complexType>
+            <!-- Definición de los elementos que lo componen -->
+            <xs:sequence>
+                <xs:element name="directorio" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="fichero" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <!-- Definición de los atributos -->
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+            <xs:attribute name="propietario" type="xs:string" use="required"/>
+            <xs:attribute name="fcreacion" type="xs:date" use="required"/>
+            <xs:attribute name="fmodificacion" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento FICHERO -->
+    <xs:element name="fichero">
+        <xs:complexType>
+            <!-- Definición de los elementos que lo componen -->
+            <xs:sequence>
+                <xs:element name="nombre"/>
+                <xs:element name="tamano"/>
+            </xs:sequence>
+            <!-- Definición de los atributos -->
+            <xs:attribute name="propietario" type="xs:string" use="required"/>
+            <xs:attribute name="fcreacion" type="xs:date" use="required"/>
+            <xs:attribute name="fmodificacion" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element> 
+
+    <!-- Definición de elemento NOMBRE -->
+    <xs:element name="nombre">
+        <xs:complexType>
+            <xs:attribute name="extension" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de elemento TAMAÑO -->
+
+    <xs:element name="tamano">
+        <xs:complexType>    
+            <xs:attribute name="unidad" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Restricción unidades: B, KB, MB, GB o TB -->
+    <xs:attribute name="unidad">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="B"/>
+                <xs:enumeration value="KB"/>
+                <xs:enumeration value="MB"/>
+                <xs:enumeration value="GB"/>
+                <xs:enumeration value="TB"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+</xs:schema>

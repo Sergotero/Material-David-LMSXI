@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- La manera de limitar las ocurrencias es la que vemos a continuación (mínimo 1, máximo 5)-->
+<!ELEMENT persona (compra, compra?, compra?, compra?, compra?)>
+    <!ELEMENT compra (titulo, fechaCompra, precio, categoria+)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT fechaCompra (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+        <!ATTLIST precio moneda (euro | libra | dolar) #REQUIRED>
+    <!ELEMENT categoria (nombreCategoria)>
+        <!ATTLIST categoria cod ID  #REQUIRED>
+        <!ATTLIST categoria descripcion CDATA "General" >
+        <!ELEMENT nombreCategoria (#PCDATA)>

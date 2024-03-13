@@ -2,7 +2,7 @@
 <!DOCTYPE biblioteca SYSTEM "ER402.dtd">
 <biblioteca>
   <libro>
-    <autor>Miguel de Cervantes Saavedra</autor>
+    <autor>Miguel de Cervantes Saavedra &#8364; </autor>
     <titulo>El Quijote de la Mancha</titulo>
   </libro>
   <libro>
