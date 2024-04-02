@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "xslt-js",
+			"label": "xslt-js: HTML",
+			"nodeModulesFolder": "${workspaceFolder}/node_modules",
+			"xsltFile": "${workspaceFolder}/${relativeFile}",
+			"xmlSource": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.xml",
+			"resultPath": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.html",
+			"parameters": [
+				{
+					"name": "val1", "value": "DAVID"
+				}
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		} ,
+		{
+			"type": "xslt-js",
+			"label": "xslt-js: XML",
+			"nodeModulesFolder": "${workspaceFolder}/node_modules",
+			"xsltFile": "${workspaceFolder}/${relativeFile}",
+			"xmlSource": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.xml",
+			"resultPath": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}-transform.xml",
+			"parameters": [
+				{
+					"name": "val1", "value": "DAVID"
+				}
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		} 
+	]
+}
