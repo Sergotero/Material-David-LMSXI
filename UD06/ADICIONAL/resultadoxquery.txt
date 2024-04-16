@@ -1,0 +1,6 @@
+XSLT Cookbook
+XML 1.1 Bible
+Introducción a XML y XML Schema
+XML: Visual QuickStart Guide
+XML Schema: The W3C's Object-Oriented Descriptions for XML
+XML Pocket Reference
