@@ -1,12 +1,12 @@
 (: 1. Listar el título de todos los libros.
 
-for $libros in /bib/libro/titulo
+for $libros in doc("bib.xml")/bib/libro/titulo
 return $libros
 :)
 
 (: 2. Listar año y título de todos los libros, ordenados por el año.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 order by $a/@ano
 return
   <libro>
@@ -19,7 +19,7 @@ return
 
 (: 3. Listar los libros cuyo precio sea 65.95.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where $a/precio = '65.95'
 return $a
 :)
@@ -28,7 +28,7 @@ return $a
 
 (: 4. Listar los libros publicados antes del año 2000.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where $a/@ano < 2000
 return $a
 :)
@@ -37,7 +37,7 @@ return $a
 
 (: 5. Listar año y título de los libros publicados por Addison-Wesley después del año 1992.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where $a/editorial = "Addison-Wesley" and $a/@ano > 1991
 return
   <libro ano="{ $a/@ano }">
@@ -49,20 +49,20 @@ return
 
 (: 6. Listar año y título de los libros que tienen más de un autor.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where count($a/autor) > 1
 return <libro ano="{ $a/@ano }">{ $a/titulo }</libro>
 :)
 
 
 (: 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where count($a/autor) > 1
 return <libro>{ $a/@ano } { $a/titulo }</libro>
 :)
 
 (: 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 return
   if (count($a/autor) > 1) 
   then <libro ano="{ $a/@ano }">{ $a/titulo }</libro>
@@ -73,20 +73,20 @@ return
 
 (: 7. Listar año y título de los libros que tienen no tienen autor.
 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where empty($a/autor)
 return <libro ano="{ $a/@ano }">{ $a/titulo }</libro>
 :)
 
 (: 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 where not(exists($a/autor))
 return <libro ano="{ $a/@ano }">{ $a/titulo }</libro>
 :)
 
 
 (: 
-for $a in /bib/libro
+for $a in doc("bib.xml")/bib/libro
 return
   if (count($a/autor) = 0) 
   then <libro ano="{ $a/@ano }">{ $a/titulo }</libro>
@@ -97,7 +97,7 @@ return
 
 (: 8. Mostrar los apellidos de los autores que aparecen en el documento, sin repeticiones, ordenados alfabéticamente.
 
-for $a in distinct-values(/bib/libro/autor/apellido) 
+for $a in distinct-values(doc("bib.xml")/bib/libro/autor/apellido) 
 order by $a 
 return $a
 :)
@@ -105,7 +105,7 @@ return $a
 
 (: 9. Por cada libro, listar agrupado en un elemento <result> su titulo y autores
 
-for $b in /bib/libro 
+for $b in doc("bib.xml")/bib/libro 
 return 
 <result> 
   { $b/titulo }
@@ -122,7 +122,7 @@ return
 
 (: 10. Por cada libro, obtener su título y el número de autores, agrupados en un elemento <libro>
 
-for $b in /bib/libro 
+for $b in doc("bib.xml")/bib/libro 
 return 
   <libro> 
     { $b/titulo }
@@ -149,7 +149,7 @@ return
       </tr>
 
       { 
-        for $a in /bib/libro 
+        for $a in doc("bib.xml")/bib/libro 
         return 
           <tr> 
             <td style="text-align:left">{ string( $a/titulo ) }</td> 
@@ -160,7 +160,7 @@ return
 
       (: No lo pide el enunciado, pero así se podría mostrar el precio medio de los libros :)
       { 
-        let $a := /bib/libro 
+        let $a := doc("bib.xml")/bib/libro 
         return 
           <tr> 
             <td></td>
@@ -190,7 +190,7 @@ return
       </tr>
 
       { 
-        for $a in /bib/libro 
+        for $a in doc("bib.xml")/bib/libro 
         where $a/autor/apellido="Stevens"
         return 
         <tr> 
@@ -202,7 +202,7 @@ return
       <tr>
         <td colspan="2">
           {
-            let $a := /bib/libro[autor/apellido="Stevens"]
+            let $a := doc("bib.xml")/bib/libro[autor/apellido="Stevens"]
             return sum( $a/precio )
           } 
         </td>

@@ -1,7 +1,7 @@
 (: 1. Una lista que contiene, para cada receta, el elemento <titulo> de la receta y un elemento <calorias> que contenga el número de calorías.
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     return
       <receta>
       { 
@@ -19,7 +19,7 @@
 
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     order by number($r/nutricion/@caloria)
     return
       <receta>
@@ -38,7 +38,7 @@
 
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     order by string($r/titulo)
     return
       <receta>
@@ -57,7 +57,7 @@
 
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     let $grasa := number($r/nutricion/@grasa || $r/nutricion/@grasas)
     order by $grasa
     return
@@ -77,7 +77,7 @@
 
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     order by string($r/titulo)
     return
       <receta titulo="{$r/titulo}">
@@ -95,7 +95,7 @@
 
 <recetas>
   { 
-    for $r in /recetas/receta
+    for $r in doc("recetas.xml")/recetas/receta
     return
       <receta title="{$r/titulo}">
       { 
@@ -115,7 +115,7 @@
 
 <recetas>
 { 
-  for $r in /recetas/receta
+  for $r in doc("recetas.xml")/recetas/receta
   where $r//ingrediente/@nombre="harina"
   return <receta title="{$r/titulo}"></receta>
 }
@@ -127,7 +127,7 @@
 
 <recetas>
 { 
-  for $r in /recetas/receta
+  for $r in doc("recetas.xml")/recetas/receta
   for $i in $r/ingrediente
   where $i/@nombre="relleno" and count($i/ingrediente) > 5
   return
@@ -143,7 +143,7 @@
 
 
 
-(: 9. for $receta in /recetas/receta
+(: 9. for $receta in doc("recetas.xml")/recetas/receta
 where 
   $receta/ingrediente/@nombre='relleno' and 
   count($receta/ingrediente[@nombre='relleno']/ingrediente) > 5
